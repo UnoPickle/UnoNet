@@ -18,7 +18,7 @@ namespace UnoNet.Server
     public static class Server
     {
         internal static TcpListener listener;
-        internal static CancellationToken serverCT = new CancellationToken();
+        internal static CancellationTokenSource serverCts = new CancellationTokenSource();
         
 
         /// <summary>
@@ -32,7 +32,7 @@ namespace UnoNet.Server
                 try
                 {
                     listener.Start();
-                    var task = Utils.ClientManager.listenForClientConnections(listener, serverCT);
+                    var task = Utils.ClientManager.listenForClientConnections(listener, serverCts.Token);
                     return true;
                 }
                 catch//(Exception e)

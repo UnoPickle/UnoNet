@@ -36,6 +36,13 @@ namespace UnoNet.Server.Utils
             }
         }
 
+        internal static void removeAllClients() {
+            foreach (Client client in clients) {
+                client.ctSource.Cancel();
+                clients.Remove(client);
+            }
+        }
+
         internal static Client GetClient(int id)
         {
             foreach (Client client in clients) {
