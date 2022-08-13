@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v3.1": {
       "UnoNet.Server/1.0.0": {
+        "dependencies": {
+          "UnoNet.Core": "1.0.0"
+        },
         "runtime": {
           "UnoNet.Server.dll": {}
+        }
+      },
+      "UnoNet.Core/1.0.0": {
+        "runtime": {
+          "UnoNet.Core.dll": {}
         }
       }
     }
   },
   "libraries": {
     "UnoNet.Server/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnoNet.Core/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

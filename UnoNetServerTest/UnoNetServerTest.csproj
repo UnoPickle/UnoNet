@@ -7,7 +7,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\UnoNet.Server\UnoNet.Server.csproj" />
-    <ProjectReference Include="..\UnoNet\UnoNet.csproj" />
   </ItemGroup>
 
 </Project>

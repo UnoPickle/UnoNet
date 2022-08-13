@@ -2,41 +2,41 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "UnoNet/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "compile": {
-          "bin/placeholder/UnoNet.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/UnoNet.dll": {}
-        }
-      },
       "UnoNet.Client/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
-          "UnoNet": "1.0.0"
+          "UnoNet.Core": "1.0.0"
         },
         "compile": {
           "bin/placeholder/UnoNet.Client.dll": {}
         },
         "runtime": {
           "bin/placeholder/UnoNet.Client.dll": {}
+        }
+      },
+      "UnoNet.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/UnoNet.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UnoNet.Core.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "UnoNet/1.0.0": {
-      "type": "project",
-      "path": "../UnoNet/UnoNet.csproj",
-      "msbuildProject": "../UnoNet/UnoNet.csproj"
-    },
     "UnoNet.Client/1.0.0": {
       "type": "project",
       "path": "../UnoNet.Client/UnoNet.Client.csproj",
       "msbuildProject": "../UnoNet.Client/UnoNet.Client.csproj"
+    },
+    "UnoNet.Core/1.0.0": {
+      "type": "project",
+      "path": "../UnoNet.Core/UnoNet.Core.csproj",
+      "msbuildProject": "../UnoNet.Core/UnoNet.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {

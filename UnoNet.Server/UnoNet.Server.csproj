@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\UnoNet\UnoNet.csproj" />
+    <ProjectReference Include="..\UnoNet.Core\UnoNet.Core.csproj" />
   </ItemGroup>
 
 </Project>

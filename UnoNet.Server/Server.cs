@@ -48,7 +48,7 @@ namespace UnoNet.Server
         /// <returns>Returns a bool value based on if the listener started or not</returns>
         public static bool init()
         {
-            return init(UnoNet.Defaults.Port);
+            return init(UnoNet.Core.Defaults.Port);
         }
 
         /// <summary>

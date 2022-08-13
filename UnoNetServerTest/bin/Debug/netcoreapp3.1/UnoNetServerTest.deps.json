@@ -14,7 +14,15 @@
           "UnoNetServerTest.dll": {}
         }
       },
+      "UnoNet.Core/1.0.0": {
+        "runtime": {
+          "UnoNet.Core.dll": {}
+        }
+      },
       "UnoNet.Server/1.0.0": {
+        "dependencies": {
+          "UnoNet.Core": "1.0.0"
+        },
         "runtime": {
           "UnoNet.Server.dll": {}
         }
@@ -23,6 +31,11 @@
   },
   "libraries": {
     "UnoNetServerTest/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnoNet.Core/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

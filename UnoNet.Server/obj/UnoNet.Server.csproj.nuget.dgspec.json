@@ -4,14 +4,14 @@
     "D:\\C# Projects\\UnoNet\\UnoNet.Server\\UnoNet.Server.csproj": {}
   },
   "projects": {
-    "D:\\C# Projects\\UnoNet\\UnoNet.Server\\UnoNet.Server.csproj": {
+    "D:\\C# Projects\\UnoNet\\UnoNet.Core\\UnoNet.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C# Projects\\UnoNet\\UnoNet.Server\\UnoNet.Server.csproj",
-        "projectName": "UnoNet.Server",
-        "projectPath": "D:\\C# Projects\\UnoNet\\UnoNet.Server\\UnoNet.Server.csproj",
+        "projectUniqueName": "D:\\C# Projects\\UnoNet\\UnoNet.Core\\UnoNet.Core.csproj",
+        "projectName": "UnoNet.Core",
+        "projectPath": "D:\\C# Projects\\UnoNet\\UnoNet.Core\\UnoNet.Core.csproj",
         "packagesPath": "C:\\Users\\hagay\\.nuget\\packages\\",
-        "outputPath": "D:\\C# Projects\\UnoNet\\UnoNet.Server\\obj\\",
+        "outputPath": "D:\\C# Projects\\UnoNet\\UnoNet.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -33,11 +33,7 @@
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
-            "projectReferences": {
-              "D:\\C# Projects\\UnoNet\\UnoNet\\UnoNet.csproj": {
-                "projectPath": "D:\\C# Projects\\UnoNet\\UnoNet\\UnoNet.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {
@@ -68,14 +64,14 @@
         }
       }
     },
-    "D:\\C# Projects\\UnoNet\\UnoNet\\UnoNet.csproj": {
+    "D:\\C# Projects\\UnoNet\\UnoNet.Server\\UnoNet.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C# Projects\\UnoNet\\UnoNet\\UnoNet.csproj",
-        "projectName": "UnoNet",
-        "projectPath": "D:\\C# Projects\\UnoNet\\UnoNet\\UnoNet.csproj",
+        "projectUniqueName": "D:\\C# Projects\\UnoNet\\UnoNet.Server\\UnoNet.Server.csproj",
+        "projectName": "UnoNet.Server",
+        "projectPath": "D:\\C# Projects\\UnoNet\\UnoNet.Server\\UnoNet.Server.csproj",
         "packagesPath": "C:\\Users\\hagay\\.nuget\\packages\\",
-        "outputPath": "D:\\C# Projects\\UnoNet\\UnoNet\\obj\\",
+        "outputPath": "D:\\C# Projects\\UnoNet\\UnoNet.Server\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -97,7 +93,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\C# Projects\\UnoNet\\UnoNet.Core\\UnoNet.Core.csproj": {
+                "projectPath": "D:\\C# Projects\\UnoNet\\UnoNet.Core\\UnoNet.Core.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
