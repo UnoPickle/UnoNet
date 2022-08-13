@@ -22,7 +22,7 @@ namespace UnoNet.Server
             this.TcpClient = client;
             ctSource = new CancellationTokenSource();
             ct = ctSource.Token;
-            var task = Utils.PacketManager.listenToClient(this, ct);
+            var task = Utils.PacketManager.listenToClient(this);
         }
 
     }

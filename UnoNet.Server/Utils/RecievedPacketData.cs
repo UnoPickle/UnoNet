@@ -1,19 +1,20 @@
 ﻿using System.Text;
+using UnoNet.Core;
 
 namespace UnoNet.Server.Utils
 {
     public class RecievedPacketData {
-        public string data { get; }
+        public Packet packet { get; }
         public Client client { get; }
 
         public RecievedPacketData(string data, Client client) { 
-            this.data = data;
+            packet = Newtonsoft.Json.JsonConvert.DeserializeObject<Packet>(data);
             this.client = client;
         }
 
         public RecievedPacketData(byte[] data, Client client)
         {
-            this.data = Encoding.ASCII.GetString(data);
+            packet = Newtonsoft.Json.JsonConvert.DeserializeObject<Packet>(Encoding.ASCII.GetString(data));
             this.client = client;
         }
     }

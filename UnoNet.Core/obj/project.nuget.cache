@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "0p9HWDfjrHfvFZ3NkxBppN3zNVWnCCwW5X//Qoj4oYZz2ZiFuYLD1sNLbbinH7BHbEGqutU9he7Hm7FvKGm6Xg==",
+  "dgSpecHash": "1qcDcqQqQWg33DgdRuwC1Y23oYeq5UiQzjTMmsKXZ+qG189f2D3MhLsTVqTx2hU5eUMvzkHL5fxC370iHSkjEw==",
   "success": true,
   "projectFilePath": "D:\\C# Projects\\UnoNet\\UnoNet.Core\\UnoNet.Core.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\hagay\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

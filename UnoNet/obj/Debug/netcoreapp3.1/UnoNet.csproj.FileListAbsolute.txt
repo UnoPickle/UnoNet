@@ -1,5 +1,0 @@
-D:\C# Projects\UnoNet\UnoNet\obj\Debug\netcoreapp3.1\UnoNet.csproj.AssemblyReference.cache
-D:\C# Projects\UnoNet\UnoNet\obj\Debug\netcoreapp3.1\UnoNet.GeneratedMSBuildEditorConfig.editorconfig
-D:\C# Projects\UnoNet\UnoNet\obj\Debug\netcoreapp3.1\UnoNet.AssemblyInfoInputs.cache
-D:\C# Projects\UnoNet\UnoNet\obj\Debug\netcoreapp3.1\UnoNet.AssemblyInfo.cs
-D:\C# Projects\UnoNet\UnoNet\obj\Debug\netcoreapp3.1\UnoNet.csproj.CoreCompileInputs.cache

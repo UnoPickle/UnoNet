@@ -36,6 +36,13 @@ namespace UnoNet.Server.Utils
             }
         }
 
+        internal static Client GetClient(int id)
+        {
+            foreach (Client client in clients) {
+                if (client.ID == id) return client;
+            }
+            return null;
+        }
 
     }
 }

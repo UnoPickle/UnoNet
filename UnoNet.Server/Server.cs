@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Net.Sockets;
 using System.Threading;
 using System.Threading.Tasks;
+using UnoNet.Core;
 
 namespace UnoNet.Server
 {
@@ -48,8 +49,21 @@ namespace UnoNet.Server
         /// <returns>Returns a bool value based on if the listener started or not</returns>
         public static bool init()
         {
-            return init(UnoNet.Core.Defaults.Port);
+            return init(Core.Defaults.Port);
         }
+
+        public static void close() { 
+            //Implement dis
+        }
+
+        public static void sendPacket(int ID, Packet packet) {
+            var task = Utils.PacketManager.sendPacket(Utils.ClientManager.GetClient(ID), packet);
+        }
+
+        public static void sendToAll() { 
+            
+        }
+
 
         /// <summary>
         /// Get all the connected clients
@@ -89,7 +103,7 @@ namespace UnoNet.Server
 
         internal static void InvokeOnPacketRecieved(Utils.RecievedPacketData data)
         {
-            if(data.data != null || data.data != String.Empty) OnPacketRecieved?.Invoke(null, data);
+            if(data.packet != null) OnPacketRecieved?.Invoke(null, data);
         }
 
         internal static void InvokeOnClientConnects(Utils.ClientConnectionArgs args) { 

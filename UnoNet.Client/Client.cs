@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net.Sockets;
+using UnoNet.Core;
 
 namespace UnoNet.Client
 {
@@ -15,7 +16,8 @@ namespace UnoNet.Client
                 client.Connect(ip.getIP(), ip.Port);
                 return true;
             }
-            catch (Exception e) { return false; }
+            catch //(Exception e)
+            { return false; }
         }
 
         public static void Disconnect() {
