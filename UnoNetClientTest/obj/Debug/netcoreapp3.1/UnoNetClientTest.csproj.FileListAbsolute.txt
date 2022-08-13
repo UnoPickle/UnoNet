@@ -1,0 +1,17 @@
+D:\C# Projects\UnoNet\UnoNetClientTest\bin\Debug\netcoreapp3.1\UnoNetClientTest.exe
+D:\C# Projects\UnoNet\UnoNetClientTest\bin\Debug\netcoreapp3.1\UnoNetClientTest.deps.json
+D:\C# Projects\UnoNet\UnoNetClientTest\bin\Debug\netcoreapp3.1\UnoNetClientTest.runtimeconfig.json
+D:\C# Projects\UnoNet\UnoNetClientTest\bin\Debug\netcoreapp3.1\UnoNetClientTest.runtimeconfig.dev.json
+D:\C# Projects\UnoNet\UnoNetClientTest\bin\Debug\netcoreapp3.1\UnoNetClientTest.dll
+D:\C# Projects\UnoNet\UnoNetClientTest\bin\Debug\netcoreapp3.1\UnoNetClientTest.pdb
+D:\C# Projects\UnoNet\UnoNetClientTest\bin\Debug\netcoreapp3.1\UnoNet.Client.dll
+D:\C# Projects\UnoNet\UnoNetClientTest\bin\Debug\netcoreapp3.1\UnoNet.Client.pdb
+D:\C# Projects\UnoNet\UnoNetClientTest\obj\Debug\netcoreapp3.1\UnoNetClientTest.csproj.AssemblyReference.cache
+D:\C# Projects\UnoNet\UnoNetClientTest\obj\Debug\netcoreapp3.1\UnoNetClientTest.GeneratedMSBuildEditorConfig.editorconfig
+D:\C# Projects\UnoNet\UnoNetClientTest\obj\Debug\netcoreapp3.1\UnoNetClientTest.AssemblyInfoInputs.cache
+D:\C# Projects\UnoNet\UnoNetClientTest\obj\Debug\netcoreapp3.1\UnoNetClientTest.AssemblyInfo.cs
+D:\C# Projects\UnoNet\UnoNetClientTest\obj\Debug\netcoreapp3.1\UnoNetClientTest.csproj.CoreCompileInputs.cache
+D:\C# Projects\UnoNet\UnoNetClientTest\obj\Debug\netcoreapp3.1\UnoNetClientTest.csproj.CopyComplete
+D:\C# Projects\UnoNet\UnoNetClientTest\obj\Debug\netcoreapp3.1\UnoNetClientTest.dll
+D:\C# Projects\UnoNet\UnoNetClientTest\obj\Debug\netcoreapp3.1\UnoNetClientTest.pdb
+D:\C# Projects\UnoNet\UnoNetClientTest\obj\Debug\netcoreapp3.1\UnoNetClientTest.genruntimeconfig.cache
