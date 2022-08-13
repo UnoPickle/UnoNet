@@ -1,0 +1,17 @@
+D:\C# Projects\UnoNet\UnoNet\UnoNet.Server\bin\Debug\netcoreapp3.1\UnoNet.Server.deps.json
+D:\C# Projects\UnoNet\UnoNet\UnoNet.Server\bin\Debug\netcoreapp3.1\UnoNet.Server.dll
+D:\C# Projects\UnoNet\UnoNet\UnoNet.Server\bin\Debug\netcoreapp3.1\UnoNet.Server.pdb
+D:\C# Projects\UnoNet\UnoNet\UnoNet.Server\obj\Debug\netcoreapp3.1\UnoNet.Server.csproj.AssemblyReference.cache
+D:\C# Projects\UnoNet\UnoNet\UnoNet.Server\obj\Debug\netcoreapp3.1\UnoNet.Server.GeneratedMSBuildEditorConfig.editorconfig
+D:\C# Projects\UnoNet\UnoNet\UnoNet.Server\obj\Debug\netcoreapp3.1\UnoNet.Server.AssemblyInfoInputs.cache
+D:\C# Projects\UnoNet\UnoNet\UnoNet.Server\obj\Debug\netcoreapp3.1\UnoNet.Server.AssemblyInfo.cs
+D:\C# Projects\UnoNet\UnoNet\UnoNet.Server\obj\Debug\netcoreapp3.1\UnoNet.Server.csproj.CoreCompileInputs.cache
+D:\C# Projects\UnoNet\UnoNet\UnoNet.Server\obj\Debug\netcoreapp3.1\UnoNet.Server.dll
+D:\C# Projects\UnoNet\UnoNet\UnoNet.Server\obj\Debug\netcoreapp3.1\UnoNet.Server.pdb
+D:\C# Projects\UnoNet\UnoNet.Server\obj\Debug\netcoreapp3.1\UnoNet.Server.csproj.AssemblyReference.cache
+D:\C# Projects\UnoNet\UnoNet.Server\obj\Debug\netcoreapp3.1\UnoNet.Server.GeneratedMSBuildEditorConfig.editorconfig
+D:\C# Projects\UnoNet\UnoNet.Server\obj\Debug\netcoreapp3.1\UnoNet.Server.AssemblyInfoInputs.cache
+D:\C# Projects\UnoNet\UnoNet.Server\obj\Debug\netcoreapp3.1\UnoNet.Server.AssemblyInfo.cs
+D:\C# Projects\UnoNet\UnoNet.Server\obj\Debug\netcoreapp3.1\UnoNet.Server.csproj.CoreCompileInputs.cache
+D:\C# Projects\UnoNet\UnoNet.Server\obj\Debug\netcoreapp3.1\UnoNet.Server.dll
+D:\C# Projects\UnoNet\UnoNet.Server\obj\Debug\netcoreapp3.1\UnoNet.Server.pdb

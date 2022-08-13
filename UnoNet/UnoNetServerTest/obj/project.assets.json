@@ -2,9 +2,22 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
+      "UnoNet/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/UnoNet.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UnoNet.dll": {}
+        }
+      },
       "UnoNet.Server/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "UnoNet": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/UnoNet.Server.dll": {}
         },
@@ -15,6 +28,11 @@
     }
   },
   "libraries": {
+    "UnoNet/1.0.0": {
+      "type": "project",
+      "path": "../UnoNet.csproj",
+      "msbuildProject": "../UnoNet.csproj"
+    },
     "UnoNet.Server/1.0.0": {
       "type": "project",
       "path": "../UnoNet.Server/UnoNet.Server.csproj",
@@ -23,6 +41,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "UnoNet >= 1.0.0",
       "UnoNet.Server >= 1.0.0"
     ]
   },
@@ -61,6 +80,9 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
+            "D:\\C# Projects\\UnoNet\\UnoNet\\UnoNet.csproj": {
+              "projectPath": "D:\\C# Projects\\UnoNet\\UnoNet\\UnoNet.csproj"
+            },
             "D:\\C# Projects\\UnoNet\\UnoNet\\UnoNet.Server\\UnoNet.Server.csproj": {
               "projectPath": "D:\\C# Projects\\UnoNet\\UnoNet\\UnoNet.Server\\UnoNet.Server.csproj"
             }

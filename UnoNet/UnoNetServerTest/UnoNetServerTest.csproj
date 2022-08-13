@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\UnoNet.csproj" />
     <ProjectReference Include="..\UnoNet.Server\UnoNet.Server.csproj" />
   </ItemGroup>
 
