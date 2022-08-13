@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace UnoNet.Server
+namespace UnoNet
 {
     public class Class1
     {

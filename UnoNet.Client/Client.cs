@@ -4,7 +4,7 @@ using System.Net.Sockets;
 namespace UnoNet.Client
 {
     public static class Client{
-        public static TcpClient client;
+        internal static TcpClient client;
 
         public static bool Connect(string ServerIP) {
             IP ip = IP.splicePort(ServerIP);

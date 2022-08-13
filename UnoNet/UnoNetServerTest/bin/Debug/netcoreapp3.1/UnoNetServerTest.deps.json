@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "UnoNetServerTest/1.0.0": {
+        "dependencies": {
+          "UnoNet.Server": "1.0.0"
+        },
+        "runtime": {
+          "UnoNetServerTest.dll": {}
+        }
+      },
+      "UnoNet.Server/1.0.0": {
+        "runtime": {
+          "UnoNet.Server.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "UnoNetServerTest/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnoNet.Server/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
