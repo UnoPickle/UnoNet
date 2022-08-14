@@ -18,7 +18,7 @@ namespace UnoNet.Server.Utils
                 NetworkStream stream = tcpClient.GetStream();
                 byte[] buffer = new byte[tcpClient.ReceiveBufferSize];
                 byte[] result;
-                while (!client.ct.IsCancellationRequested)/*add a check to when a client disconnects*/
+                while (!client.ct.IsCancellationRequested)
                 {
                     result = new byte[buffer.Length];
                     await stream.ReadAsync(result, 0, (int)buffer.Length);

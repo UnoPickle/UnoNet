@@ -10,7 +10,10 @@ namespace UnoNet.Client
     public static class Client{
         internal static TcpClient client;
         internal static CancellationTokenSource cts = new CancellationTokenSource();
-        public static int ID; 
+
+        public static int ID;
+        public static bool IsConnected { get; private set; } = false;
+
         public static bool Connect(string address, int port) {
             IP ip = new IP(address, port);
             client = new TcpClient();
@@ -18,9 +21,11 @@ namespace UnoNet.Client
             {
                 client.Connect(ip.getIP(), ip.Port);
                 var task = PacketManager.listenForPackets();
+                IsConnected = true;
                 return true;
             }
             catch /*(Exception e) */{
+                IsConnected = false;
                 return false;
             }
             
@@ -39,6 +44,8 @@ namespace UnoNet.Client
             client.Close();
             client = null;
             ID = 0;
+            cts.Cancel();
+            IsConnected = false;
         }
 
         public static void sendPacket(Packet packet) {
@@ -54,9 +61,18 @@ namespace UnoNet.Client
         /// </summary>
         public static EventHandler<Packet> OnPacketRecieved;
 
+        /// <summary>
+        /// Gets called every time a client joins the server 
+        /// </summary>
+        public static EventHandler<NewClientArgs> OnNewClient;
+
         internal static void InvokeOnPacketRecieved(Packet packet) {
             if(!packet.isUnoNetPacket) OnPacketRecieved?.Invoke(null, packet);
             if (packet.isUnoNetPacket) PacketManager.handleUnoNetPackets(packet);
+        }
+
+        internal static void InvokeOnNewClient(NewClientArgs args) {
+            OnNewClient?.Invoke(null, args);
         }
     }
 }

@@ -4,6 +4,7 @@
         Disconnect,
         RegID,
         NewClient,
-        ClientToAll
+        ClientToAll,
+        //ClientToClient,
     }
 }

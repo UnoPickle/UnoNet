@@ -94,7 +94,6 @@ namespace UnoNet.Server
         }
 
 
-
         /// <summary>
         /// Gets called every time the listener recieves a packet
         /// </summary>
@@ -113,11 +112,12 @@ namespace UnoNet.Server
         }
 
         internal static void InvokeOnClientConnects(Utils.ClientConnectionArgs args) { 
-            OnClientConnects?.Invoke(null, args);    
+            OnClientConnects?.Invoke(null, args);
+            sendToAll(Packets.newClient(args.client.ID));
         }
 
         internal static void InvokeOnClientDisconnects(Utils.ClientDisconnectEventArgs args) {
-            OnClientDisconnects?.Invoke(null, args);
+            OnClientDisconnects?.Invoke(null, args);          
         }
 
     }

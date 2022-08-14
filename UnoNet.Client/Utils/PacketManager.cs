@@ -45,6 +45,9 @@ namespace UnoNet.Client.Utils
                     Client.ID = int.Parse(packet.get("ID").ToString());
                     //Console.WriteLine(Client.ID);
                     break;
+                case (int)PacketEvents.NewClient:
+                    Client.InvokeOnNewClient(new NewClientArgs(int.Parse(packet.get("ID").ToString())));
+                    break;
             }
         }
     }

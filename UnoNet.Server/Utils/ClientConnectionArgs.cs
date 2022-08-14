@@ -12,7 +12,7 @@ namespace UnoNet.Server.Utils
         public string IP { get; }
         public Client client { get; }
 
-        public ClientConnectionArgs(Client client) { 
+        public ClientConnectionArgs(Client client) {
             this.client = client;
             this.TcpClient = client.TcpClient;
             IP = ((IPEndPoint)TcpClient.Client.RemoteEndPoint).Address.ToString();
