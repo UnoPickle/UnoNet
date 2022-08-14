@@ -7,12 +7,11 @@ namespace UnoNet.Server.Utils
     public class RecievedPacketData {
         public Packet packet { get; }
         public Client client { get; }
-        internal bool isUnoNetPacket { get; }
 
         public RecievedPacketData(string data, Client client) { 
             packet = Newtonsoft.Json.JsonConvert.DeserializeObject<Packet>(data);
             this.client = client;
-            if (packet.data.ContainsKey("UnoNet")) isUnoNetPacket = true; 
+            //if (packet.data.ContainsKey("UnoNet")) isUnoNetPacket = true; 
         }
 
         public RecievedPacketData(byte[] data, Client client)
@@ -21,7 +20,7 @@ namespace UnoNet.Server.Utils
             if (packet != null)
             {
                 this.client = client;
-                if (packet.data.ContainsKey("UnoNet")) isUnoNetPacket = true;
+                //if (packet.data.ContainsKey("UnoNet")) isUnoNetPacket = true;
             }
         }
     }

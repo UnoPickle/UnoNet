@@ -4,6 +4,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using UnoNet.Core;
 
 namespace UnoNet.Server.Utils
 {
@@ -16,6 +17,7 @@ namespace UnoNet.Server.Utils
                 Client client = new Client(tcpClient);
                 Server.InvokeOnClientConnects(new ClientConnectionArgs(client));
                 clients.Add(client);
+                Server.sendPacket(client.ID, Packets.regID(client.ID));
             }
         }
 

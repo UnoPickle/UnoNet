@@ -10,6 +10,7 @@ namespace UnoNetClientTest
         {
             Client.Connect("127.0.0.1:4343");
             Client.OnPacketRecieved += Client_OnPacketRecieved;
+            Client.sendToAll(new Packet(new System.Collections.Generic.Dictionary<string, object>() { { "ID", Client.ID } }));
             Console.ReadKey();
             Client.Disconnect();
             Console.ReadKey();

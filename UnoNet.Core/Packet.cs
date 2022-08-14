@@ -14,6 +14,8 @@ namespace UnoNet.Core
         /// </summary>
         public Dictionary<string, object> data { get; }
 
+        public bool isUnoNetPacket { get; }
+
         /// <summary>
         /// Get a variable by name
         /// </summary>
@@ -30,6 +32,7 @@ namespace UnoNet.Core
         /// <param name="data">String - Name, Object - Variable</param>
         public Packet(Dictionary<string, Object> data) { 
             this.data = data;
+            if (data.ContainsKey("UnoNet")) isUnoNetPacket = true;
         }
 
         public override string ToString()

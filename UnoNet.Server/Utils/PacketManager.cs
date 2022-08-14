@@ -33,6 +33,12 @@ namespace UnoNet.Server.Utils
             if (!client.ct.IsCancellationRequested) await stream.WriteAsync(Encoding.ASCII.GetBytes(convertPacketToJson(packet)), client.ct);
         }
 
+        internal static async Task SendToAll(Packet packet) {
+            foreach (Client client in ClientManager.clients) {
+                await sendPacket(client, packet);
+            }
+        }
+
         internal static string convertPacketToJson(Packet packet) {
             return Newtonsoft.Json.JsonConvert.SerializeObject(packet);
         }
@@ -45,7 +51,12 @@ namespace UnoNet.Server.Utils
                     Server.KickClient(data.client.ID, DisconnectReason.Disconnected);
                     break;
 
-
+                case (int)PacketEvents.ClientToAll:
+                    Dictionary<string, object> modifiedData = data.packet.data;
+                    modifiedData.Remove("UnoNet");
+                    modifiedData.Remove("Event");
+                    Server.sendToAll(new Packet(modifiedData));
+                    break;
                 default:
                     //Console.WriteLine("Unknown Event");
                     break;

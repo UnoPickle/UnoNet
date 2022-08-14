@@ -25,7 +25,7 @@ namespace UnoNetServerTest
         private static void Server_OnClientConnects(object sender, ClientConnectionArgs e)
         {
             Console.WriteLine($"New Connection: {e.IP} + {e.client.ID}");
-            Console.WriteLine(Server.getAllClients().Count +1);
+            //Console.WriteLine(Server.getAllClients().Count +1);
         }
 
         private static void Server_OnPacketRecieved(object sender, RecievedPacketData data)

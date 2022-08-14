@@ -14,8 +14,8 @@ namespace UnoNet.Server
     {
         internal static TcpListener listener;
         internal static CancellationTokenSource serverCts = new CancellationTokenSource();
-        
 
+        #region Server Core Functions
         /// <summary>
         /// Initializes server with the specified port
         /// </summary>
@@ -47,18 +47,24 @@ namespace UnoNet.Server
             return init(Core.Defaults.Port);
         }
 
-        public static void close() { 
+
+
+        public static void close() {
             //Implement dis
         }
 
+        #endregion
+
+        #region Packet Sending Functions
         public static void sendPacket(int ID, Packet packet) {
             var task = Utils.PacketManager.sendPacket(Utils.ClientManager.GetClient(ID), packet);
         }
 
-        public static void sendToAll() { 
-            
+        public static void sendToAll(Packet packet) {
+            var task = Utils.PacketManager.SendToAll(packet);
         }
 
+        #endregion
 
         /// <summary>
         /// Get all the connected clients
@@ -102,8 +108,8 @@ namespace UnoNet.Server
 
         internal static void InvokeOnPacketRecieved(Utils.RecievedPacketData data)
         {
-            if(data.packet != null && !data.isUnoNetPacket) OnPacketRecieved?.Invoke(null, data);
-            if (data.isUnoNetPacket && data.packet.data.Count != 0) Utils.PacketManager.handleUnoNetPacket(data); 
+            if(data.packet != null && !data.packet.isUnoNetPacket) OnPacketRecieved?.Invoke(null, data);
+            if (data.packet.isUnoNetPacket && data.packet.data.Count != 0) Utils.PacketManager.handleUnoNetPacket(data); 
         }
 
         internal static void InvokeOnClientConnects(Utils.ClientConnectionArgs args) { 

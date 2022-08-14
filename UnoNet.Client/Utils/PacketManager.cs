@@ -10,7 +10,7 @@ namespace UnoNet.Client.Utils
 {
     internal class PacketManager
     {
-        internal async Task listenForPackets() {
+        internal static async Task listenForPackets() {
             TcpClient client = Client.client;
             using (client) {
                 NetworkStream stream = client.GetStream();
@@ -37,6 +37,15 @@ namespace UnoNet.Client.Utils
         }
         internal static Packet convertBytesToPacket(byte[] data) {
             return convertJsonToPacket(Encoding.ASCII.GetString(data));
+        }
+
+        internal static void handleUnoNetPackets(Packet packet) {
+            switch (int.Parse(packet.get("Event").ToString())) {
+                case (int)PacketEvents.RegID:
+                    Client.ID = int.Parse(packet.get("ID").ToString());
+                    //Console.WriteLine(Client.ID);
+                    break;
+            }
         }
     }
 }

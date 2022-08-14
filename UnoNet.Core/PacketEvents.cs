@@ -3,6 +3,7 @@
     public enum PacketEvents { 
         Disconnect,
         RegID,
-        NewClient
+        NewClient,
+        ClientToAll
     }
 }
