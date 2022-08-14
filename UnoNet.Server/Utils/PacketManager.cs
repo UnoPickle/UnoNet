@@ -36,5 +36,17 @@ namespace UnoNet.Server.Utils
         internal static string convertPacketToJson(Packet packet) {
             return Newtonsoft.Json.JsonConvert.SerializeObject(packet);
         }
+
+        internal static void handleUnoNetPacket(RecievedPacketData client)
+        {
+            Console.WriteLine("Recieved UnoNet packet");
+            switch ((PacketEvents)client.packet.get("Event")) { 
+                case PacketEvents.Disconnect:
+                    Server.KickClient(client.client.ID, DisconnectReason.Disconnected);
+                    
+                    break;
+            }
+
+        }
     }
 }

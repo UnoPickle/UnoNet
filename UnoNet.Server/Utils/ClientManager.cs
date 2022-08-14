@@ -29,7 +29,7 @@ namespace UnoNet.Server.Utils
         internal static void removeClient(int id) {
             foreach (Client client in clients) {
                 if (client.ID == id) {
-                    client.ctSource.Cancel();
+                    client.Close();
                     clients.Remove(client);
                     break;
                 }
@@ -38,7 +38,7 @@ namespace UnoNet.Server.Utils
 
         internal static void removeAllClients() {
             foreach (Client client in clients) {
-                client.ctSource.Cancel();
+                client.Close();
                 clients.Remove(client);
             }
         }

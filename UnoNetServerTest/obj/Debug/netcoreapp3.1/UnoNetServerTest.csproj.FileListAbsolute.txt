@@ -34,3 +34,4 @@ D:\C# Projects\UnoNet\UnoNetServerTest\obj\Debug\netcoreapp3.1\UnoNetServerTest.
 D:\C# Projects\UnoNet\UnoNetServerTest\obj\Debug\netcoreapp3.1\UnoNetServerTest.genruntimeconfig.cache
 D:\C# Projects\UnoNet\UnoNetServerTest\bin\Debug\netcoreapp3.1\UnoNet.Core.dll
 D:\C# Projects\UnoNet\UnoNetServerTest\bin\Debug\netcoreapp3.1\UnoNet.Core.pdb
+D:\C# Projects\UnoNet\UnoNetServerTest\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll

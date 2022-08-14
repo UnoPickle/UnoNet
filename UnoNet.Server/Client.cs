@@ -2,6 +2,7 @@
 using System;
 using System.Net.Sockets;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace UnoNet.Server
 {
@@ -12,7 +13,12 @@ namespace UnoNet.Server
         internal CancellationToken ct { get; }
         internal CancellationTokenSource ctSource { get; }
 
-        public Client(TcpClient client) {
+        internal void Close() { 
+            ctSource.Cancel();
+            TcpClient.Close();
+        }
+
+        internal Client(TcpClient client) {
             Random rnd = new Random();
             int rndID = rnd.Next(10000, 99999);
             while (!Utils.ClientManager.checkIDAvailiblity(rndID)) { 

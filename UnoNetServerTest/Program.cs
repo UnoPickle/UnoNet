@@ -21,9 +21,12 @@ namespace UnoNetServerTest
             Console.WriteLine($"New Connection: {e.IP} + {e.client.ID}");
         }
 
-        private static void Server_OnPacketRecieved(object sender, UnoNet.Server.Utils.RecievedPacketData data)
+        private static void Server_OnPacketRecieved(object sender, RecievedPacketData data)
         {
-            Console.WriteLine(data.client.ID);        
+            Console.WriteLine(data.client.ID);
+            
         }
+
+        //Packet packet = new Packet(new System.Collections.Generic.Dictionary<string, object>() { { "x", 3}, { "y", 4 } });
     }
 }

@@ -7,11 +7,6 @@ using UnoNet.Core;
 
 namespace UnoNet.Server
 {
-    public class TestPacketClassData{
-        public string Data { get; set; }
-
-    }
-
     /// <summary>
     /// This class manages all the server main functions
     /// </summary>
@@ -77,8 +72,9 @@ namespace UnoNet.Server
         /// Remove a connected client
         /// </summary>
         /// <param name="ID">ID of the client</param>
-        public static void KickClient(int ID) {
+        public static void KickClient(int ID, DisconnectReason reason) {
             Utils.ClientManager.removeClient(ID);
+            InvokeOnClientDisconnects(new Utils.ClientDisconnectEventArgs(Utils.ClientManager.GetClient(ID), reason));
         }
 
         /// <summary>
@@ -101,13 +97,20 @@ namespace UnoNet.Server
         /// </summary>
         public static EventHandler<Utils.ClientConnectionArgs> OnClientConnects;
 
+        public static EventHandler<Utils.ClientDisconnectEventArgs> OnClientDisconnects;
+
         internal static void InvokeOnPacketRecieved(Utils.RecievedPacketData data)
         {
-            if(data.packet != null) OnPacketRecieved?.Invoke(null, data);
+            if(data.packet != null || !data.isUnoNetPacket) OnPacketRecieved?.Invoke(null, data);
+            if (data.isUnoNetPacket) Utils.PacketManager.handleUnoNetPacket(data); 
         }
 
         internal static void InvokeOnClientConnects(Utils.ClientConnectionArgs args) { 
             OnClientConnects?.Invoke(null, args);    
+        }
+
+        internal static void InvokeOnClientDisconnects(Utils.ClientDisconnectEventArgs args) {
+            OnClientDisconnects?.Invoke(null, args);
         }
 
     }
