@@ -8,3 +8,6 @@ D:\C# Projects\UnoNet\UnoNet.Client\obj\Debug\netcoreapp3.1\UnoNet.Client.Assemb
 D:\C# Projects\UnoNet\UnoNet.Client\obj\Debug\netcoreapp3.1\UnoNet.Client.csproj.CoreCompileInputs.cache
 D:\C# Projects\UnoNet\UnoNet.Client\obj\Debug\netcoreapp3.1\UnoNet.Client.dll
 D:\C# Projects\UnoNet\UnoNet.Client\obj\Debug\netcoreapp3.1\UnoNet.Client.pdb
+D:\C# Projects\UnoNet\UnoNet.Client\bin\Debug\netcoreapp3.1\UnoNet.Core.dll
+D:\C# Projects\UnoNet\UnoNet.Client\bin\Debug\netcoreapp3.1\UnoNet.Core.pdb
+D:\C# Projects\UnoNet\UnoNet.Client\obj\Debug\netcoreapp3.1\UnoNet.Client.csproj.CopyComplete

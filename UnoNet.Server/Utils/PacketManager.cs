@@ -37,15 +37,20 @@ namespace UnoNet.Server.Utils
             return Newtonsoft.Json.JsonConvert.SerializeObject(packet);
         }
 
-        internal static void handleUnoNetPacket(RecievedPacketData client)
+        internal static void handleUnoNetPacket(RecievedPacketData data)
         {
-            Console.WriteLine("Recieved UnoNet packet");
-            switch ((PacketEvents)client.packet.get("Event")) { 
-                case PacketEvents.Disconnect:
-                    Server.KickClient(client.client.ID, DisconnectReason.Disconnected);
-                    
+            //Console.WriteLine("Recieved UnoNet packet " + data.packet.ToString());
+            switch (int.Parse(data.packet.get("Event").ToString())) { 
+                case ((int)PacketEvents.Disconnect):    
+                    Server.KickClient(data.client.ID, DisconnectReason.Disconnected);
+                    break;
+
+
+                default:
+                    //Console.WriteLine("Unknown Event");
                     break;
             }
+            
 
         }
     }

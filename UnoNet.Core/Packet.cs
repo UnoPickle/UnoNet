@@ -20,7 +20,7 @@ namespace UnoNet.Core
         /// <param name="name">Name of the variable</param>
         /// <returns>Returns an Object (needs to be casted for usage)</returns>
         public object get(string name) {
-            Object value;
+            object value;
             data.TryGetValue(name, out value);
             return value;
         }
@@ -30,6 +30,15 @@ namespace UnoNet.Core
         /// <param name="data">String - Name, Object - Variable</param>
         public Packet(Dictionary<string, Object> data) { 
             this.data = data;
+        }
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            foreach (KeyValuePair<string, object> kv in data) {
+                sb.AppendLine(kv.Key + " - " + kv.Value);
+            }
+            return sb.ToString();
         }
 
     }

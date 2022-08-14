@@ -13,17 +13,24 @@ namespace UnoNetServerTest
             Console.WriteLine(Server.init(4343));
             UnoNet.Server.Server.OnPacketRecieved += Server_OnPacketRecieved;
             Server.OnClientConnects += Server_OnClientConnects;
+            Server.OnClientDisconnects += Server_OnClientDisconnects;
             Console.ReadKey();
+        }
+
+        private static void Server_OnClientDisconnects(object sender, ClientDisconnectEventArgs e)
+        {
+            Console.WriteLine($"Client disconnected: {e.client.ID}");
         }
 
         private static void Server_OnClientConnects(object sender, ClientConnectionArgs e)
         {
             Console.WriteLine($"New Connection: {e.IP} + {e.client.ID}");
+            Console.WriteLine(Server.getAllClients().Count +1);
         }
 
         private static void Server_OnPacketRecieved(object sender, RecievedPacketData data)
         {
-            Console.WriteLine(data.client.ID);
+            Console.WriteLine(data.packet.ToString());
             
         }
 

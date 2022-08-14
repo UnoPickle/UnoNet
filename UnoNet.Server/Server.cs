@@ -73,8 +73,9 @@ namespace UnoNet.Server
         /// </summary>
         /// <param name="ID">ID of the client</param>
         public static void KickClient(int ID, DisconnectReason reason) {
-            Utils.ClientManager.removeClient(ID);
             InvokeOnClientDisconnects(new Utils.ClientDisconnectEventArgs(Utils.ClientManager.GetClient(ID), reason));
+            Utils.ClientManager.removeClient(ID);
+
         }
 
         /// <summary>
@@ -101,8 +102,8 @@ namespace UnoNet.Server
 
         internal static void InvokeOnPacketRecieved(Utils.RecievedPacketData data)
         {
-            if(data.packet != null || !data.isUnoNetPacket) OnPacketRecieved?.Invoke(null, data);
-            if (data.isUnoNetPacket) Utils.PacketManager.handleUnoNetPacket(data); 
+            if(data.packet != null && !data.isUnoNetPacket) OnPacketRecieved?.Invoke(null, data);
+            if (data.isUnoNetPacket && data.packet.data.Count != 0) Utils.PacketManager.handleUnoNetPacket(data); 
         }
 
         internal static void InvokeOnClientConnects(Utils.ClientConnectionArgs args) { 

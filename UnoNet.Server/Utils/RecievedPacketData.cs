@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System;
+using System.Text;
 using UnoNet.Core;
 
 namespace UnoNet.Server.Utils
@@ -17,8 +18,11 @@ namespace UnoNet.Server.Utils
         public RecievedPacketData(byte[] data, Client client)
         {
             packet = Newtonsoft.Json.JsonConvert.DeserializeObject<Packet>(Encoding.ASCII.GetString(data));
-            this.client = client;
-            if (packet.data.ContainsKey("UnoNet")) isUnoNetPacket = true;
+            if (packet != null)
+            {
+                this.client = client;
+                if (packet.data.ContainsKey("UnoNet")) isUnoNetPacket = true;
+            }
         }
     }
 }
