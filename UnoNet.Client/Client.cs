@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net.Sockets;
+using System.Threading;
 using System.Threading.Tasks;
 using UnoNet.Client.Utils;
 using UnoNet.Core;
@@ -8,7 +9,7 @@ namespace UnoNet.Client
 {
     public static class Client{
         internal static TcpClient client;
-
+        internal static CancellationTokenSource cts = new CancellationTokenSource();
         public static bool Connect(string ServerIP) {
             IP ip = IP.splicePort(ServerIP);
             if (ip.Port == 0 || ip.Port == null) ip.Port = Defaults.Port;
@@ -40,5 +41,9 @@ namespace UnoNet.Client
         }
 
         public static EventHandler<Packet> OnPacketRecieved;
+
+        internal static void InvokeOnPacketRecieved(Packet packet) {
+            OnPacketRecieved?.Invoke(null, packet);
+        }
     }
 }

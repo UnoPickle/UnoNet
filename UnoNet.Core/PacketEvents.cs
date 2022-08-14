@@ -1,6 +1,8 @@
 ﻿namespace UnoNet.Core
 {
     public enum PacketEvents { 
-        Disconnect
+        Disconnect,
+        RegID,
+        NewClient
     }
 }

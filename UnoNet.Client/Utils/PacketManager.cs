@@ -10,6 +10,20 @@ namespace UnoNet.Client.Utils
 {
     internal class PacketManager
     {
+        internal async Task listenForPackets() {
+            TcpClient client = Client.client;
+            using (client) {
+                NetworkStream stream = client.GetStream();
+                byte[] buffer = new byte[client.ReceiveBufferSize];
+                byte[] result;
+                while (!Client.cts.Token.IsCancellationRequested) {
+                    result = new byte[buffer.Length];
+                    await stream.ReadAsync(result, 0, (int)buffer.Length);
+                    if (result != null) Client.InvokeOnPacketRecieved(convertBytesToPacket(result));
+                }
+            }
+        }
+
         internal static void sendPacket(Packet packet, TcpClient client) {
             client.GetStream().Write(Encoding.ASCII.GetBytes(Newtonsoft.Json.JsonConvert.SerializeObject(packet)));
         }
