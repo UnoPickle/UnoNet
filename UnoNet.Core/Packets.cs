@@ -43,5 +43,13 @@ namespace UnoNet.Core
         public static Packet getAllClients() {
             return new Packet(new Dictionary<string, object>() { { "UnoNet", true}, { "Event", PacketEvents.GetAllIDS} });
         }
+
+        /// <summary>
+        /// Internal function. Use provided function (UnoNet.Server.Server.close)
+        /// </summary>
+        public static Packet serverClosing()
+        {
+            return new Packet(new Dictionary<string, object>() { { "UnoNet", true }, { "Event", PacketEvents.ServerClosing}});
+        }
     }
 }

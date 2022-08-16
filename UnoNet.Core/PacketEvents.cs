@@ -8,7 +8,8 @@
         RegID,
         NewClient,
         ClientToAll,
-        ClientToClient,
+        ClientToClient, //Implement later
         GetAllIDS,
+        ServerClosing
     }
 }

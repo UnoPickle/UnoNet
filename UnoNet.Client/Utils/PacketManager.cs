@@ -54,6 +54,9 @@ namespace UnoNet.Client.Utils
                 case (int)PacketEvents.GetAllIDS:
                     Client.recievedClientIDs.AddRange((List<int>)packet.get("IDs"));
                     break;
+                case (int)PacketEvents.ServerClosing:
+                    Client.Disconnect();
+                    break;
             }
         }
     }

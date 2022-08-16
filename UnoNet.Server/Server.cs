@@ -16,6 +16,11 @@ namespace UnoNet.Server
         internal static TcpListener listener;
         internal static CancellationTokenSource serverCts = new CancellationTokenSource();
 
+        /// <summary>
+        /// Value based of if the server is running or not
+        /// </summary>
+        public static bool IsRunning { get; private set; } = false;
+
         #region Server Core Functions
         /// <summary>
         /// Initializes server with the specified port
@@ -29,13 +34,16 @@ namespace UnoNet.Server
                 {
                     listener.Start();
                     var task = Utils.ClientManager.listenForClientConnections(listener, serverCts.Token);
+                    IsRunning = true;
                     return true;
                 }
-                catch(Exception e)
+                catch//(Exception e)
                 {
-                    Console.WriteLine(e);
+                    //Console.WriteLine(e);
+                    IsRunning = false;
                 }
             }
+            IsRunning = false;
             return false;
         }
 
@@ -50,10 +58,11 @@ namespace UnoNet.Server
 
 
         /// <summary>
-        /// Close the server (WIP)
+        /// Close the server
         /// </summary>
         public static void close() {
-            //Implement dis
+            sendToAll(Packets.serverClosing());
+            listener.Stop();
         }
 
         #endregion
@@ -131,6 +140,7 @@ namespace UnoNet.Server
 
         internal static void InvokeOnClientDisconnects(Utils.ClientDisconnectEventArgs args) {
             OnClientDisconnects?.Invoke(null, args);          
+            //send to all clients
         }
 
     }
