@@ -4,6 +4,9 @@ using System.Text;
 
 namespace UnoNet.Core
 {
+    /// <summary>
+    /// Reasons of disconnection
+    /// </summary>
     public enum DisconnectReason
     {
        Removed,

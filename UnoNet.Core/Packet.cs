@@ -35,6 +35,10 @@ namespace UnoNet.Core
             if (data.ContainsKey("UnoNet")) isUnoNetPacket = true;
         }
 
+        /// <summary>
+        /// Get a string that represents this class
+        /// </summary>
+        /// <returns>Data variable in a string format</returns>
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();

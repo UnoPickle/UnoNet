@@ -1,5 +1,8 @@
 ﻿namespace UnoNet.Core
 {
+    /// <summary>
+    /// Internal UnoNet class
+    /// </summary>
     public enum PacketEvents { 
         Disconnect,
         RegID,

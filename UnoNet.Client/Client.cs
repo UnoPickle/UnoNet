@@ -13,9 +13,21 @@ namespace UnoNet.Client
         internal static CancellationTokenSource cts = new CancellationTokenSource();
         internal static List<int> recievedClientIDs = new List<int>();
 
-        public static int ID;
+        /// <summary>
+        /// ID of the machine in the server
+        /// </summary>
+        public static int ID { get; internal set; }
+        /// <summary>
+        /// Boolean value based on whether the machine is connected to a server or not
+        /// </summary>
         public static bool IsConnected { get; private set; } = false;
 
+        /// <summary>
+        /// Connect to a server
+        /// </summary>
+        /// <param name="address">Address of the server</param>
+        /// <param name="port">Port of the server</param>
+        /// <returns>A boolean based on whether was successful or not</returns>
         public static bool Connect(string address, int port) {
             IP ip = new IP(address, port);
             client = new TcpClient();
@@ -33,6 +45,11 @@ namespace UnoNet.Client
             
         }
 
+        /// <summary>
+        /// Connect to a server
+        /// </summary>
+        /// <param name="ServerIP">The server ip, containing the port (Address:Port)</param>
+        /// <returns>A boolean based on whether was successful or not</returns>
         public static bool Connect(string ServerIP)
         {
             IP ip = IP.splicePort(ServerIP);
@@ -40,7 +57,9 @@ namespace UnoNet.Client
             return Connect(ip.Address, ip.Port);
         }
 
-
+        /// <summary>
+        /// Disconnect from connected server
+        /// </summary>
         public static void Disconnect() {
             sendPacket(Packets.disconnectPacket(DisconnectReason.Disconnected));
             client.Close();
@@ -50,14 +69,26 @@ namespace UnoNet.Client
             IsConnected = false;
         }
 
+        /// <summary>
+        /// Send a packet to the server
+        /// </summary>
+        /// <param name="packet">Packet to send</param>
         public static void sendPacket(Packet packet) {
             PacketManager.sendPacket(packet, client);
         }
 
+        /// <summary>
+        /// Send a packet to all the connected clients
+        /// </summary>
+        /// <param name="packet">Packet to send</param>
         public static void sendToAll(Packet packet) {
             PacketManager.sendPacket(Packets.clientToAll(packet), client);
         }
 
+        /// <summary>
+        /// Get the IDs of all the connected clients
+        /// </summary>
+        /// <returns>A List<int> containing all the IDs</returns>
         public static List<int> getAllIDS() {
             sendPacket(Packets.getAllClients());
             return recievedClientIDs;

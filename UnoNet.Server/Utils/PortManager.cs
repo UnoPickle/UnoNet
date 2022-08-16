@@ -7,7 +7,7 @@ namespace UnoNet.Server.Utils
 {
     internal class PortManager
     {
-        public static bool checkPortAvailablilty(int port) {
+        internal static bool checkPortAvailablilty(int port) {
             bool isAvailable = true;
 
             IPGlobalProperties ipGlobalProperties = IPGlobalProperties.GetIPGlobalProperties();

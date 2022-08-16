@@ -5,11 +5,15 @@ using System.Text;
 
 namespace UnoNet.Client.Utils
 {
+    /// <summary>
+    /// IP class
+    /// </summary>
     public class IP
     {
         public string Address { set; get; }
         public int Port { set; get; }
-        public IPAddress getIP()
+
+        internal IPAddress getIP()
         {
             return IPAddress.Parse(Address);
         }

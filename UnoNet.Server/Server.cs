@@ -49,7 +49,9 @@ namespace UnoNet.Server
         }
 
 
-
+        /// <summary>
+        /// Close the server (WIP)
+        /// </summary>
         public static void close() {
             //Implement dis
         }
@@ -57,10 +59,19 @@ namespace UnoNet.Server
         #endregion
 
         #region Packet Sending Functions
+
+        /// <summary>
+        /// Send a packet to a client
+        /// </summary>
+        /// <param name="ID">ID of the client</param>
+        /// <param name="packet">Data to send</param>
         public static void sendPacket(int ID, Packet packet) {
             var task = Utils.PacketManager.sendPacket(Utils.ClientManager.GetClient(ID), packet);
         }
-
+        /// <summary>
+        /// Send a packet to all the connected clients
+        /// </summary>
+        /// <param name="packet">Data to send</param>
         public static void sendToAll(Packet packet) {
             var task = Utils.PacketManager.SendToAll(packet);
         }
@@ -103,7 +114,9 @@ namespace UnoNet.Server
         /// Gets called every time a client connects to the server
         /// </summary>
         public static EventHandler<Utils.ClientConnectionArgs> OnClientConnects;
-
+        /// <summary>
+        /// Gets called every time a client disconnects from the server
+        /// </summary>
         public static EventHandler<Utils.ClientDisconnectEventArgs> OnClientDisconnects;
 
         internal static void InvokeOnPacketRecieved(Utils.RecievedPacketData data)

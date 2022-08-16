@@ -7,8 +7,14 @@ using UnoNet.Core;
 
 namespace UnoNet.Server
 {
+    /// <summary>
+    /// Class that represents a connected client
+    /// </summary>
     public class Client
     {
+        /// <summary>
+        /// ID of the client
+        /// </summary>
         public readonly int ID;
         internal TcpClient TcpClient { set; get; }
         internal CancellationToken ct { get; }
