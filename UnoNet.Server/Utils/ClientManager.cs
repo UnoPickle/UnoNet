@@ -15,7 +15,7 @@ namespace UnoNet.Server.Utils
             while (!ct.IsCancellationRequested) {
                 TcpClient tcpClient = await listener.AcceptTcpClientAsync();
                 Client client = new Client(tcpClient);
-                Server.InvokeOnClientConnects(new ClientConnectionArgs(client));
+                Server.sendToAll(Packets.newClient(client.ID));
                 clients.Add(client);
                 Server.sendPacket(client.ID, Packets.regID(client.ID));
             }
@@ -45,13 +45,12 @@ namespace UnoNet.Server.Utils
             }
         }
 
-        internal static Client GetClient(int id)
+        public static Client GetClient(int id)
         {
             foreach (Client client in clients) {
                 if (client.ID == id) return client;
             }
             return null;
         }
-
     }
 }

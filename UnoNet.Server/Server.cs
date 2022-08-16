@@ -4,6 +4,7 @@ using System.Net.Sockets;
 using System.Threading;
 using System.Threading.Tasks;
 using UnoNet.Core;
+using UnoNet.Server.Utils;
 
 namespace UnoNet.Server
 {
@@ -30,9 +31,9 @@ namespace UnoNet.Server
                     var task = Utils.ClientManager.listenForClientConnections(listener, serverCts.Token);
                     return true;
                 }
-                catch//(Exception e)
+                catch(Exception e)
                 {
-                    //Console.WriteLine(e);
+                    Console.WriteLine(e);
                 }
             }
             return false;
@@ -111,9 +112,8 @@ namespace UnoNet.Server
             if (data.packet.isUnoNetPacket && data.packet.data.Count != 0) Utils.PacketManager.handleUnoNetPacket(data); 
         }
 
-        internal static void InvokeOnClientConnects(Utils.ClientConnectionArgs args) { 
-            OnClientConnects?.Invoke(null, args);
-            sendToAll(Packets.newClient(args.client.ID));
+        internal static void InvokeOnClientConnects(Utils.ClientConnectionArgs args) {
+            Server.OnClientConnects?.Invoke(null, args);
         }
 
         internal static void InvokeOnClientDisconnects(Utils.ClientDisconnectEventArgs args) {

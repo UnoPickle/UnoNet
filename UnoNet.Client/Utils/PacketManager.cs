@@ -19,7 +19,8 @@ namespace UnoNet.Client.Utils
                 while (!Client.cts.Token.IsCancellationRequested) {
                     result = new byte[buffer.Length];
                     await stream.ReadAsync(result, 0, (int)buffer.Length);
-                    if (result != null) Client.InvokeOnPacketRecieved(convertBytesToPacket(result));
+                    Packet resultedPacket = convertBytesToPacket(result);
+                    if ( resultedPacket != null) Client.InvokeOnPacketRecieved(resultedPacket);
                 }
             }
         }

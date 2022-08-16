@@ -10,11 +10,12 @@ namespace UnoNetServerTest
 
         static void Main(string[] args)
         {
-            Console.WriteLine(Server.init(4343));
+            Console.WriteLine(Server.init(4323));
             UnoNet.Server.Server.OnPacketRecieved += Server_OnPacketRecieved;
             Server.OnClientConnects += Server_OnClientConnects;
             Server.OnClientDisconnects += Server_OnClientDisconnects;
             Console.ReadKey();
+            Server.close();
         }
 
         private static void Server_OnClientDisconnects(object sender, ClientDisconnectEventArgs e)

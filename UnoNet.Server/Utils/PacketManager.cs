@@ -65,8 +65,7 @@ namespace UnoNet.Server.Utils
                         allIDS.Add(client.ID);
                     }
                     Server.sendPacket(data.client.ID, new Packet(new Dictionary<string, object>() { { "UnoNet", true}, { "Event", PacketEvents.GetAllIDS}, { "IDs", allIDS} }));
-                    break;
-
+                    break; 
                 default:
                     //Console.WriteLine("Unknown Event");
                     break;
