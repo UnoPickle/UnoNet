@@ -58,6 +58,15 @@ namespace UnoNet.Server.Utils
                     modifiedData.Remove("Event");
                     Server.sendToAll(new Packet(modifiedData));
                     break;
+
+                case (int)PacketEvents.GetAllIDS:
+                    List<int> allIDS = new List<int>();
+                    foreach (Client client in Server.getAllClients()) { 
+                        allIDS.Add(client.ID);
+                    }
+                    Server.sendPacket(data.client.ID, new Packet(new Dictionary<string, object>() { { "UnoNet", true}, { "Event", PacketEvents.GetAllIDS}, { "IDs", allIDS} }));
+                    break;
+
                 default:
                     //Console.WriteLine("Unknown Event");
                     break;

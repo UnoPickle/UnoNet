@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Net.Sockets;
 using System.Threading;
 using System.Threading.Tasks;
@@ -10,6 +11,7 @@ namespace UnoNet.Client
     public static class Client{
         internal static TcpClient client;
         internal static CancellationTokenSource cts = new CancellationTokenSource();
+        internal static List<int> recievedClientIDs = new List<int>();
 
         public static int ID;
         public static bool IsConnected { get; private set; } = false;
@@ -54,6 +56,11 @@ namespace UnoNet.Client
 
         public static void sendToAll(Packet packet) {
             PacketManager.sendPacket(Packets.clientToAll(packet), client);
+        }
+
+        public static List<int> getAllIDS() {
+            sendPacket(Packets.getAllClients());
+            return recievedClientIDs;
         }
 
         /// <summary>

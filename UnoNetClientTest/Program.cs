@@ -9,6 +9,7 @@ namespace UnoNetClientTest
     {
         static void Main(string[] args)
         {
+            Console.ReadKey();
             Client.Connect("127.0.0.1:4343");
             Client.OnPacketRecieved += Client_OnPacketRecieved;
             Client.OnNewClient += Client_OnNewClient;

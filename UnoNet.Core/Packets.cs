@@ -23,5 +23,9 @@ namespace UnoNet.Core
         public static Packet newClient(int ID) {
             return new Packet(new Dictionary<string, object>() { { "UnoNet", true}, { "Event", PacketEvents.NewClient}, { "ID", ID} });
         }
+
+        public static Packet getAllClients() {
+            return new Packet(new Dictionary<string, object>() { { "UnoNet", true}, { "Event", PacketEvents.GetAllIDS} });
+        }
     }
 }

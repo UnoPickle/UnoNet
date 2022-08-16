@@ -5,6 +5,7 @@
         RegID,
         NewClient,
         ClientToAll,
-        //ClientToClient,
+        ClientToClient,
+        GetAllIDS,
     }
 }
