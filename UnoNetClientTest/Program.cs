@@ -15,6 +15,7 @@ namespace UnoNetClientTest
             Client.OnNewClient += Client_OnNewClient;
             //Client.sendToAll(new Packet(new System.Collections.Generic.Dictionary<string, object>() { { "ID", Client.ID } }));
             Console.ReadKey();
+            Console.WriteLine(Client.ID);
             Client.Disconnect();
             Console.ReadKey();
         }

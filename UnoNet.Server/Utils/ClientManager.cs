@@ -18,6 +18,7 @@ namespace UnoNet.Server.Utils
                 Server.sendToAll(Packets.newClient(client.ID));
                 clients.Add(client);
                 Server.sendPacket(client.ID, Packets.regID(client.ID));
+                Server.InvokeOnClientConnects(new ClientConnectionArgs(client));
             }
         }
 
