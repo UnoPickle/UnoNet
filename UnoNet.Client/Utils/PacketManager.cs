@@ -25,11 +25,13 @@ namespace UnoNet.Client.Utils
         }
 
         internal static void sendPacket(Packet packet, TcpClient client) {
-            client.GetStream().Write(Encoding.ASCII.GetBytes(Newtonsoft.Json.JsonConvert.SerializeObject(packet)));
+            byte[] bytes = Encoding.ASCII.GetBytes(Newtonsoft.Json.JsonConvert.SerializeObject(packet));
+            client.GetStream().Write(bytes, 0, bytes.Length);
         }
 
         internal static async Task sendPacketAsync(Packet packet, TcpClient client, CancellationToken ct) {
-            await client.GetStream().WriteAsync(Encoding.ASCII.GetBytes(Newtonsoft.Json.JsonConvert.SerializeObject(packet)), ct);
+            byte[] bytes = Encoding.ASCII.GetBytes(Newtonsoft.Json.JsonConvert.SerializeObject(packet));
+            await client.GetStream().WriteAsync(bytes,0,bytes.Length, ct);
         }
 
         internal static Packet convertJsonToPacket(string json) {

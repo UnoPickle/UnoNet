@@ -1,0 +1,17 @@
+D:\C# Projects\UnoNet\UnoNetServerTest\obj\Debug\net481\UnoNetServerTest.csproj.AssemblyReference.cache
+D:\C# Projects\UnoNet\UnoNetServerTest\obj\Debug\net481\UnoNetServerTest.csproj.SuggestedBindingRedirects.cache
+D:\C# Projects\UnoNet\UnoNetServerTest\obj\Debug\net481\UnoNetServerTest.GeneratedMSBuildEditorConfig.editorconfig
+D:\C# Projects\UnoNet\UnoNetServerTest\obj\Debug\net481\UnoNetServerTest.AssemblyInfoInputs.cache
+D:\C# Projects\UnoNet\UnoNetServerTest\obj\Debug\net481\UnoNetServerTest.AssemblyInfo.cs
+D:\C# Projects\UnoNet\UnoNetServerTest\obj\Debug\net481\UnoNetServerTest.csproj.CoreCompileInputs.cache
+D:\C# Projects\UnoNet\UnoNetServerTest\bin\Debug\net481\UnoNetServerTest.exe.config
+D:\C# Projects\UnoNet\UnoNetServerTest\bin\Debug\net481\UnoNetServerTest.exe
+D:\C# Projects\UnoNet\UnoNetServerTest\bin\Debug\net481\UnoNetServerTest.pdb
+D:\C# Projects\UnoNet\UnoNetServerTest\bin\Debug\net481\Newtonsoft.Json.dll
+D:\C# Projects\UnoNet\UnoNetServerTest\bin\Debug\net481\UnoNet.Core.dll
+D:\C# Projects\UnoNet\UnoNetServerTest\bin\Debug\net481\UnoNet.Server.dll
+D:\C# Projects\UnoNet\UnoNetServerTest\bin\Debug\net481\UnoNet.Server.pdb
+D:\C# Projects\UnoNet\UnoNetServerTest\bin\Debug\net481\UnoNet.Core.pdb
+D:\C# Projects\UnoNet\UnoNetServerTest\obj\Debug\net481\UnoNetServerTest.csproj.CopyComplete
+D:\C# Projects\UnoNet\UnoNetServerTest\obj\Debug\net481\UnoNetServerTest.exe
+D:\C# Projects\UnoNet\UnoNetServerTest\obj\Debug\net481\UnoNetServerTest.pdb

@@ -1,0 +1,17 @@
+D:\C# Projects\UnoNet\UnoNetClientTest\bin\Debug\net481\UnoNetClientTest.exe.config
+D:\C# Projects\UnoNet\UnoNetClientTest\bin\Debug\net481\UnoNetClientTest.exe
+D:\C# Projects\UnoNet\UnoNetClientTest\bin\Debug\net481\UnoNetClientTest.pdb
+D:\C# Projects\UnoNet\UnoNetClientTest\bin\Debug\net481\Newtonsoft.Json.dll
+D:\C# Projects\UnoNet\UnoNetClientTest\bin\Debug\net481\UnoNet.Client.dll
+D:\C# Projects\UnoNet\UnoNetClientTest\bin\Debug\net481\UnoNet.Core.dll
+D:\C# Projects\UnoNet\UnoNetClientTest\bin\Debug\net481\UnoNet.Client.pdb
+D:\C# Projects\UnoNet\UnoNetClientTest\bin\Debug\net481\UnoNet.Core.pdb
+D:\C# Projects\UnoNet\UnoNetClientTest\obj\Debug\net481\UnoNetClientTest.csproj.AssemblyReference.cache
+D:\C# Projects\UnoNet\UnoNetClientTest\obj\Debug\net481\UnoNetClientTest.csproj.SuggestedBindingRedirects.cache
+D:\C# Projects\UnoNet\UnoNetClientTest\obj\Debug\net481\UnoNetClientTest.GeneratedMSBuildEditorConfig.editorconfig
+D:\C# Projects\UnoNet\UnoNetClientTest\obj\Debug\net481\UnoNetClientTest.AssemblyInfoInputs.cache
+D:\C# Projects\UnoNet\UnoNetClientTest\obj\Debug\net481\UnoNetClientTest.AssemblyInfo.cs
+D:\C# Projects\UnoNet\UnoNetClientTest\obj\Debug\net481\UnoNetClientTest.csproj.CoreCompileInputs.cache
+D:\C# Projects\UnoNet\UnoNetClientTest\obj\Debug\net481\UnoNetClientTest.csproj.CopyComplete
+D:\C# Projects\UnoNet\UnoNetClientTest\obj\Debug\net481\UnoNetClientTest.exe
+D:\C# Projects\UnoNet\UnoNetClientTest\obj\Debug\net481\UnoNetClientTest.pdb

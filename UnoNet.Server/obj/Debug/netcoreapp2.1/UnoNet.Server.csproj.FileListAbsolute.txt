@@ -1,0 +1,13 @@
+D:\C# Projects\UnoNet\UnoNet.Server\bin\Debug\netcoreapp2.1\UnoNet.Server.deps.json
+D:\C# Projects\UnoNet\UnoNet.Server\bin\Debug\netcoreapp2.1\UnoNet.Server.dll
+D:\C# Projects\UnoNet\UnoNet.Server\bin\Debug\netcoreapp2.1\UnoNet.Server.pdb
+D:\C# Projects\UnoNet\UnoNet.Server\bin\Debug\netcoreapp2.1\UnoNet.Core.dll
+D:\C# Projects\UnoNet\UnoNet.Server\bin\Debug\netcoreapp2.1\UnoNet.Core.pdb
+D:\C# Projects\UnoNet\UnoNet.Server\obj\Debug\netcoreapp2.1\UnoNet.Server.csproj.AssemblyReference.cache
+D:\C# Projects\UnoNet\UnoNet.Server\obj\Debug\netcoreapp2.1\UnoNet.Server.GeneratedMSBuildEditorConfig.editorconfig
+D:\C# Projects\UnoNet\UnoNet.Server\obj\Debug\netcoreapp2.1\UnoNet.Server.AssemblyInfoInputs.cache
+D:\C# Projects\UnoNet\UnoNet.Server\obj\Debug\netcoreapp2.1\UnoNet.Server.AssemblyInfo.cs
+D:\C# Projects\UnoNet\UnoNet.Server\obj\Debug\netcoreapp2.1\UnoNet.Server.csproj.CoreCompileInputs.cache
+D:\C# Projects\UnoNet\UnoNet.Server\obj\Debug\netcoreapp2.1\UnoNet.Server.csproj.CopyComplete
+D:\C# Projects\UnoNet\UnoNet.Server\obj\Debug\netcoreapp2.1\UnoNet.Server.dll
+D:\C# Projects\UnoNet\UnoNet.Server\obj\Debug\netcoreapp2.1\UnoNet.Server.pdb

@@ -1,0 +1,10 @@
+D:\C# Projects\UnoNet\UnoNet.Core\bin\Debug\netcoreapp2.1\UnoNet.Core.deps.json
+D:\C# Projects\UnoNet\UnoNet.Core\bin\Debug\netcoreapp2.1\UnoNet.Core.dll
+D:\C# Projects\UnoNet\UnoNet.Core\bin\Debug\netcoreapp2.1\UnoNet.Core.pdb
+D:\C# Projects\UnoNet\UnoNet.Core\obj\Debug\netcoreapp2.1\UnoNet.Core.csproj.AssemblyReference.cache
+D:\C# Projects\UnoNet\UnoNet.Core\obj\Debug\netcoreapp2.1\UnoNet.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\C# Projects\UnoNet\UnoNet.Core\obj\Debug\netcoreapp2.1\UnoNet.Core.AssemblyInfoInputs.cache
+D:\C# Projects\UnoNet\UnoNet.Core\obj\Debug\netcoreapp2.1\UnoNet.Core.AssemblyInfo.cs
+D:\C# Projects\UnoNet\UnoNet.Core\obj\Debug\netcoreapp2.1\UnoNet.Core.csproj.CoreCompileInputs.cache
+D:\C# Projects\UnoNet\UnoNet.Core\obj\Debug\netcoreapp2.1\UnoNet.Core.dll
+D:\C# Projects\UnoNet\UnoNet.Core\obj\Debug\netcoreapp2.1\UnoNet.Core.pdb

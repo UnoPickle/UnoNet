@@ -30,7 +30,8 @@ namespace UnoNet.Server.Utils
         internal static async Task sendPacket(Client client, Packet packet) { 
             TcpClient tcpClient = client.TcpClient;
             NetworkStream stream = tcpClient.GetStream();
-            if (!client.ct.IsCancellationRequested) await stream.WriteAsync(Encoding.ASCII.GetBytes(convertPacketToJson(packet)), client.ct);
+            byte[] bytes = Encoding.ASCII.GetBytes(convertPacketToJson(packet));
+            if (!client.ct.IsCancellationRequested) await stream.WriteAsync(bytes, 0, bytes.Length, client.ct);
         }
 
         internal static async Task SendToAll(Packet packet) {

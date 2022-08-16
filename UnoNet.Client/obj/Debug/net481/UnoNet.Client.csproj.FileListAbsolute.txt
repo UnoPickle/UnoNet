@@ -1,0 +1,13 @@
+D:\C# Projects\UnoNet\UnoNet.Client\obj\Debug\net481\UnoNet.Client.csproj.AssemblyReference.cache
+D:\C# Projects\UnoNet\UnoNet.Client\obj\Debug\net481\UnoNet.Client.GeneratedMSBuildEditorConfig.editorconfig
+D:\C# Projects\UnoNet\UnoNet.Client\obj\Debug\net481\UnoNet.Client.AssemblyInfoInputs.cache
+D:\C# Projects\UnoNet\UnoNet.Client\obj\Debug\net481\UnoNet.Client.AssemblyInfo.cs
+D:\C# Projects\UnoNet\UnoNet.Client\obj\Debug\net481\UnoNet.Client.csproj.CoreCompileInputs.cache
+D:\C# Projects\UnoNet\UnoNet.Client\bin\Debug\net481\UnoNet.Client.dll
+D:\C# Projects\UnoNet\UnoNet.Client\bin\Debug\net481\UnoNet.Client.pdb
+D:\C# Projects\UnoNet\UnoNet.Client\bin\Debug\net481\Newtonsoft.Json.dll
+D:\C# Projects\UnoNet\UnoNet.Client\bin\Debug\net481\UnoNet.Core.dll
+D:\C# Projects\UnoNet\UnoNet.Client\bin\Debug\net481\UnoNet.Core.pdb
+D:\C# Projects\UnoNet\UnoNet.Client\obj\Debug\net481\UnoNet.Client.csproj.CopyComplete
+D:\C# Projects\UnoNet\UnoNet.Client\obj\Debug\net481\UnoNet.Client.dll
+D:\C# Projects\UnoNet\UnoNet.Client\obj\Debug\net481\UnoNet.Client.pdb

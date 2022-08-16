@@ -1,0 +1,13 @@
+D:\C# Projects\UnoNet\UnoNet.Server\obj\Debug\net481\UnoNet.Server.csproj.AssemblyReference.cache
+D:\C# Projects\UnoNet\UnoNet.Server\obj\Debug\net481\UnoNet.Server.GeneratedMSBuildEditorConfig.editorconfig
+D:\C# Projects\UnoNet\UnoNet.Server\obj\Debug\net481\UnoNet.Server.AssemblyInfoInputs.cache
+D:\C# Projects\UnoNet\UnoNet.Server\obj\Debug\net481\UnoNet.Server.AssemblyInfo.cs
+D:\C# Projects\UnoNet\UnoNet.Server\obj\Debug\net481\UnoNet.Server.csproj.CoreCompileInputs.cache
+D:\C# Projects\UnoNet\UnoNet.Server\bin\Debug\net481\UnoNet.Server.dll
+D:\C# Projects\UnoNet\UnoNet.Server\bin\Debug\net481\UnoNet.Server.pdb
+D:\C# Projects\UnoNet\UnoNet.Server\bin\Debug\net481\Newtonsoft.Json.dll
+D:\C# Projects\UnoNet\UnoNet.Server\bin\Debug\net481\UnoNet.Core.dll
+D:\C# Projects\UnoNet\UnoNet.Server\bin\Debug\net481\UnoNet.Core.pdb
+D:\C# Projects\UnoNet\UnoNet.Server\obj\Debug\net481\UnoNet.Server.csproj.CopyComplete
+D:\C# Projects\UnoNet\UnoNet.Server\obj\Debug\net481\UnoNet.Server.dll
+D:\C# Projects\UnoNet\UnoNet.Server\obj\Debug\net481\UnoNet.Server.pdb
