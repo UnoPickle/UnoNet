@@ -9,3 +9,5 @@ D:\C# Projects\UnoNet\UnoNet.Core\obj\Debug\net481\UnoNet.Core.csproj.CoreCompil
 D:\C# Projects\UnoNet\UnoNet.Core\obj\Debug\net481\UnoNet.Core.csproj.CopyComplete
 D:\C# Projects\UnoNet\UnoNet.Core\obj\Debug\net481\UnoNet.Core.dll
 D:\C# Projects\UnoNet\UnoNet.Core\obj\Debug\net481\UnoNet.Core.pdb
+D:\C# Projects\UnoNet\UnoNet.Core\bin\Debug\net481\UnoNet.Core.xml
+D:\C# Projects\UnoNet\UnoNet.Core\obj\Debug\net481\UnoNet.Core.xml

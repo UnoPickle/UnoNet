@@ -15,3 +15,5 @@ D:\C# Projects\UnoNet\UnoNetClientTest\obj\Debug\net481\UnoNetClientTest.csproj.
 D:\C# Projects\UnoNet\UnoNetClientTest\obj\Debug\net481\UnoNetClientTest.csproj.CopyComplete
 D:\C# Projects\UnoNet\UnoNetClientTest\obj\Debug\net481\UnoNetClientTest.exe
 D:\C# Projects\UnoNet\UnoNetClientTest\obj\Debug\net481\UnoNetClientTest.pdb
+D:\C# Projects\UnoNet\UnoNetClientTest\bin\Debug\net481\UnoNet.Client.xml
+D:\C# Projects\UnoNet\UnoNetClientTest\bin\Debug\net481\UnoNet.Core.xml

@@ -94,7 +94,7 @@ namespace UnoNet.Server
         /// <summary>
         /// Get all the connected clients
         /// </summary>
-        /// <returns>Returns List<Client> with all the connected clients</returns>
+        /// <returns>Returns a List with all the connected clients</returns>
         public static List<Client> getAllClients() {
             return Utils.ClientManager.clients;
         }

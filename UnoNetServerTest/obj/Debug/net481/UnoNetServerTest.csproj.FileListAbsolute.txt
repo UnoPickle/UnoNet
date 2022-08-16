@@ -15,3 +15,5 @@ D:\C# Projects\UnoNet\UnoNetServerTest\bin\Debug\net481\UnoNet.Core.pdb
 D:\C# Projects\UnoNet\UnoNetServerTest\obj\Debug\net481\UnoNetServerTest.csproj.CopyComplete
 D:\C# Projects\UnoNet\UnoNetServerTest\obj\Debug\net481\UnoNetServerTest.exe
 D:\C# Projects\UnoNet\UnoNetServerTest\obj\Debug\net481\UnoNetServerTest.pdb
+D:\C# Projects\UnoNet\UnoNetServerTest\bin\Debug\net481\UnoNet.Server.xml
+D:\C# Projects\UnoNet\UnoNetServerTest\bin\Debug\net481\UnoNet.Core.xml

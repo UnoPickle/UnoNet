@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UnoNet.Server</name>
+    </assembly>
+    <members>
+        <member name="T:UnoNet.Server.Client">
+            <summary>
+            Class that represents a connected client
+            </summary>
+        </member>
+        <member name="F:UnoNet.Server.Client.ID">
+            <summary>
+            ID of the client
+            </summary>
+        </member>
+        <member name="T:UnoNet.Server.Server">
+            <summary>
+            This class manages all the server main functions
+            </summary>
+        </member>
+        <member name="P:UnoNet.Server.Server.IsRunning">
+            <summary>
+            Value based of if the server is running or not
+            </summary>
+        </member>
+        <member name="M:UnoNet.Server.Server.init(System.Int32)">
+            <summary>
+            Initializes server with the specified port
+            </summary>
+            <returns>Returns a bool value based on if the listener started or not</returns>
+            <param name="port">Specify the port on which the server will listen</param>
+        </member>
+        <member name="M:UnoNet.Server.Server.init">
+            <summary>
+            Initializes server with the default port
+            </summary>
+            <returns>Returns a bool value based on if the listener started or not</returns>
+        </member>
+        <member name="M:UnoNet.Server.Server.close">
+            <summary>
+            Close the server
+            </summary>
+        </member>
+        <member name="M:UnoNet.Server.Server.sendPacket(System.Int32,UnoNet.Core.Packet)">
+            <summary>
+            Send a packet to a client
+            </summary>
+            <param name="ID">ID of the client</param>
+            <param name="packet">Data to send</param>
+        </member>
+        <member name="M:UnoNet.Server.Server.sendToAll(UnoNet.Core.Packet)">
+            <summary>
+            Send a packet to all the connected clients
+            </summary>
+            <param name="packet">Data to send</param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:UnoNet.Server.Server.getAllClients" -->
+        <member name="M:UnoNet.Server.Server.KickClient(System.Int32,UnoNet.Core.DisconnectReason)">
+            <summary>
+            Remove a connected client
+            </summary>
+            <param name="ID">ID of the client</param>
+        </member>
+        <member name="M:UnoNet.Server.Server.checkClientExsitance(System.Int32)">
+            <summary>
+            Check if a client exists
+            </summary>
+            <param name="ID">ID of the client</param>
+            <returns>Returns a bool value based on if the client exists or not</returns>
+        </member>
+        <member name="F:UnoNet.Server.Server.OnPacketRecieved">
+            <summary>
+            Gets called every time the listener recieves a packet
+            </summary>
+        </member>
+        <member name="F:UnoNet.Server.Server.OnClientConnects">
+            <summary>
+            Gets called every time a client connects to the server
+            </summary>
+        </member>
+        <member name="F:UnoNet.Server.Server.OnClientDisconnects">
+            <summary>
+            Gets called every time a client disconnects from the server
+            </summary>
+        </member>
+        <member name="T:UnoNet.Server.Utils.ClientConnectionArgs">
+            <summary>
+            Data the gets passed when a new client connects
+            </summary>
+        </member>
+        <member name="P:UnoNet.Server.Utils.ClientConnectionArgs.IP">
+            <summary>
+            IP of the client
+            </summary>
+        </member>
+        <member name="P:UnoNet.Server.Utils.ClientConnectionArgs.client">
+            <summary>
+            Client class of the connecting client
+            </summary>
+        </member>
+        <member name="T:UnoNet.Server.Utils.ClientDisconnectEventArgs">
+            <summary>
+            Data that gets passed when a client disconnects
+            </summary>
+        </member>
+        <member name="P:UnoNet.Server.Utils.ClientDisconnectEventArgs.client">
+            <summary>
+            Client class of the disconnecting client
+            </summary>
+        </member>
+        <member name="P:UnoNet.Server.Utils.ClientDisconnectEventArgs.reason">
+            <summary>
+            The reason of why did the client disconnected
+            </summary>
+        </member>
+        <member name="T:UnoNet.Server.Utils.RecievedPacketData">
+            <summary>
+            Data the gets passed when recieved a pacekt 
+            </summary>
+        </member>
+        <member name="P:UnoNet.Server.Utils.RecievedPacketData.packet">
+            <summary>
+            Recieved packet
+            </summary>
+        </member>
+        <member name="P:UnoNet.Server.Utils.RecievedPacketData.client">
+            <summary>
+            Sending client
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UnoNet.Core</name>
+    </assembly>
+    <members>
+        <member name="T:UnoNet.Core.Defaults">
+            <summary>
+            Default values for the library
+            </summary>
+        </member>
+        <member name="F:UnoNet.Core.Defaults.Port">
+            <summary>
+            Default port for servers and clients
+            </summary>
+        </member>
+        <member name="T:UnoNet.Core.DisconnectReason">
+            <summary>
+            Reasons of disconnection
+            </summary>
+        </member>
+        <member name="T:UnoNet.Core.Packet">
+            <summary>
+            Data transfer unit
+            </summary>
+        </member>
+        <member name="P:UnoNet.Core.Packet.data">
+            <summary>
+            String - name, Object - Variable (needs to be casted for usage)
+            </summary>
+        </member>
+        <member name="M:UnoNet.Core.Packet.get(System.String)">
+            <summary>
+            Get a variable by name
+            </summary>
+            <param name="name">Name of the variable</param>
+            <returns>Returns an Object (needs to be casted for usage)</returns>
+        </member>
+        <member name="M:UnoNet.Core.Packet.#ctor(System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Data transfer unit
+            </summary>
+            <param name="data">String - Name, Object - Variable</param>
+        </member>
+        <member name="M:UnoNet.Core.Packet.ToString">
+            <summary>
+            Get a string that represents this class
+            </summary>
+            <returns>Data variable in a string format</returns>
+        </member>
+        <member name="T:UnoNet.Core.PacketEvents">
+            <summary>
+            Internal UnoNet class
+            </summary>
+        </member>
+        <member name="M:UnoNet.Core.Packets.disconnectPacket(System.Int32,UnoNet.Core.DisconnectReason)">
+            <summary>
+            Internal function. Use provided function (UnoNet.Client.Client.Disconnect)
+            </summary>
+        </member>
+        <member name="M:UnoNet.Core.Packets.regID(System.Int32)">
+            <summary>
+            Internal function
+            </summary>
+        </member>
+        <member name="M:UnoNet.Core.Packets.clientToAll(UnoNet.Core.Packet)">
+            <summary>
+            Internal function. Use provided function (UnoNet.Client.Client.SendToAll/ UnoNet.Server.Server.SendToAll)
+            </summary>
+        </member>
+        <member name="M:UnoNet.Core.Packets.newClient(System.Int32)">
+            <summary>
+            Internal function
+            </summary>
+        </member>
+        <member name="M:UnoNet.Core.Packets.getAllClients">
+            <summary>
+            Internal function. Use provided function (UnoNet.Client.Client.GetAllIDS)
+            </summary>
+        </member>
+        <member name="M:UnoNet.Core.Packets.serverClosing">
+            <summary>
+            Internal function. Use provided function (UnoNet.Server.Server.close)
+            </summary>
+        </member>
+    </members>
+</doc>

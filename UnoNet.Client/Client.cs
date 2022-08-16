@@ -29,20 +29,23 @@ namespace UnoNet.Client
         /// <param name="port">Port of the server</param>
         /// <returns>A boolean based on whether was successful or not</returns>
         public static bool Connect(string address, int port) {
-            IP ip = new IP(address, port);
-            client = new TcpClient();
-            try
-            {
-                client.Connect(ip.getIP(), ip.Port);
-                var task = PacketManager.listenForPackets();
-                IsConnected = true;
-                return true;
+            if (!IsConnected) {
+                IP ip = new IP(address, port);
+                client = new TcpClient();
+                try
+                {
+                    client.Connect(ip.getIP(), ip.Port);
+                    var task = PacketManager.listenForPackets();
+                    IsConnected = true;
+                    return true;
+                }
+                catch /*(Exception e) */
+                {
+                    IsConnected = false;
+                    return false;
+                }
             }
-            catch /*(Exception e) */{
-                IsConnected = false;
-                return false;
-            }
-            
+            return false;
         }
 
         /// <summary>
