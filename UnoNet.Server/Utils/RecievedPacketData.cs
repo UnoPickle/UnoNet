@@ -22,7 +22,6 @@ namespace UnoNet.Server.Utils
         public RecievedPacketData(string data, Client client) { 
             packet = Newtonsoft.Json.JsonConvert.DeserializeObject<Packet>(data);
             this.client = client;
-            //if (packet.data.ContainsKey("UnoNet")) isUnoNetPacket = true; 
         }
 
         public RecievedPacketData(byte[] data, Client client)
@@ -31,7 +30,6 @@ namespace UnoNet.Server.Utils
             if (packet != null)
             {
                 this.client = client;
-                //if (packet.data.ContainsKey("UnoNet")) isUnoNetPacket = true;
             }
         }
     }

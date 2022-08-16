@@ -43,19 +43,24 @@ namespace UnoNet.Client.Utils
         }
 
         internal static void handleUnoNetPackets(Packet packet) {
+            //Console.WriteLine("Recieving UnoNet packet:\n " + packet.ToString());
             switch (int.Parse(packet.get("Event").ToString())) {
                 case (int)PacketEvents.RegID:
                     Client.ID = int.Parse(packet.get("ID").ToString());
                     //Console.WriteLine(Client.ID);
                     break;
                 case (int)PacketEvents.NewClient:
-                    Client.InvokeOnNewClient(new NewClientArgs(int.Parse(packet.get("ID").ToString())));
+                    Client.InvokeClientConnecting(new NewClientArgs(int.Parse(packet.get("ID").ToString())));
                     break;
                 case (int)PacketEvents.GetAllIDS:
                     Client.recievedClientIDs.AddRange((List<int>)packet.get("IDs"));
                     break;
                 case (int)PacketEvents.ServerClosing:
                     Client.Disconnect();
+                    break;
+                case (int)PacketEvents.Disconnect:
+                    Client.InvokeOnClientDisconnect(new ClientDisconnectingArgs(int.Parse(packet.get("ID").ToString()), DisconnectReason.Disconnected));
+                    //Change to the disconnect reason from the packet
                     break;
             }
         }

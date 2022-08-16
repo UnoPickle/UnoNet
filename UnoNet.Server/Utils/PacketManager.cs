@@ -50,6 +50,7 @@ namespace UnoNet.Server.Utils
             switch (int.Parse(data.packet.get("Event").ToString())) { 
                 case ((int)PacketEvents.Disconnect):    
                     Server.KickClient(data.client.ID, DisconnectReason.Disconnected);
+                    //Change to disconnect reason from packet
                     break;
 
                 case (int)PacketEvents.ClientToAll:

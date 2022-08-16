@@ -61,8 +61,12 @@ namespace UnoNet.Server
         /// Close the server
         /// </summary>
         public static void close() {
-            sendToAll(Packets.serverClosing());
-            listener.Stop();
+            if (IsRunning) {
+                sendToAll(Packets.serverClosing());
+                listener.Stop();
+                IsRunning = false;
+            }
+            
         }
 
         #endregion
@@ -130,8 +134,11 @@ namespace UnoNet.Server
 
         internal static void InvokeOnPacketRecieved(Utils.RecievedPacketData data)
         {
-            if(data.packet != null && !data.packet.isUnoNetPacket) OnPacketRecieved?.Invoke(null, data);
-            if (data.packet.isUnoNetPacket && data.packet.data.Count != 0) Utils.PacketManager.handleUnoNetPacket(data); 
+            if (data.packet != null) {
+                if (!data.packet.isUnoNetPacket) OnPacketRecieved?.Invoke(null, data);
+                if (data.packet.isUnoNetPacket) Utils.PacketManager.handleUnoNetPacket(data);
+            }
+            
         }
 
         internal static void InvokeOnClientConnects(Utils.ClientConnectionArgs args) {
@@ -139,8 +146,8 @@ namespace UnoNet.Server
         }
 
         internal static void InvokeOnClientDisconnects(Utils.ClientDisconnectEventArgs args) {
-            OnClientDisconnects?.Invoke(null, args);          
-            //send to all clients
+            OnClientDisconnects?.Invoke(null, args);
+            sendToAll(Packets.disconnectPacket(args.client.ID,args.reason));
         }
 
     }

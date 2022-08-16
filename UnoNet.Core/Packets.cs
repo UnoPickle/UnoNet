@@ -9,8 +9,8 @@ namespace UnoNet.Core
         /// <summary>
         /// Internal function. Use provided function (UnoNet.Client.Client.Disconnect)
         /// </summary>
-        public static Packet disconnectPacket(DisconnectReason reason){
-            return new Packet(new Dictionary<string, object>() { { "UnoNet", true }, { "Event", PacketEvents.Disconnect}, { "Reason", reason} });
+        public static Packet disconnectPacket(int ID,DisconnectReason reason){
+            return new Packet(new Dictionary<string, object>() { { "UnoNet", true }, { "Event", PacketEvents.Disconnect}, { "Reason", reason}, { "ID",ID } });
         }
 
         /// <summary>

@@ -61,12 +61,14 @@ namespace UnoNet.Client
         /// Disconnect from connected server
         /// </summary>
         public static void Disconnect() {
-            sendPacket(Packets.disconnectPacket(DisconnectReason.Disconnected));
-            client.Close();
-            client = null;
-            ID = 0;
-            cts.Cancel();
-            IsConnected = false;
+            if (IsConnected) {
+                sendPacket(Packets.disconnectPacket(ID ,DisconnectReason.Disconnected));
+                client.Close();
+                client = null;
+                ID = 0;
+                cts.Cancel();
+                IsConnected = false;
+            }  
         }
 
         /// <summary>
@@ -102,15 +104,21 @@ namespace UnoNet.Client
         /// <summary>
         /// Gets called every time a client joins the server 
         /// </summary>
-        public static EventHandler<NewClientArgs> OnNewClient;
+        public static EventHandler<NewClientArgs> OnClientConnecting;
+
+        public static EventHandler<ClientDisconnectingArgs> OnClientDisconnect;
 
         internal static void InvokeOnPacketRecieved(Packet packet) {
             if(!packet.isUnoNetPacket) OnPacketRecieved?.Invoke(null, packet);
             if (packet.isUnoNetPacket) PacketManager.handleUnoNetPackets(packet);
         }
 
-        internal static void InvokeOnNewClient(NewClientArgs args) {
-            OnNewClient?.Invoke(null, args);
+        internal static void InvokeClientConnecting(NewClientArgs args) {
+            OnClientConnecting?.Invoke(null, args);
+        }
+
+        internal static void InvokeOnClientDisconnect(ClientDisconnectingArgs args) {
+            OnClientDisconnect?.Invoke(null, args);
         }
     }
 }
