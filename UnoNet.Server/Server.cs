@@ -17,7 +17,7 @@ namespace UnoNet.Server
         internal static CancellationTokenSource serverCts = new CancellationTokenSource();
 
         /// <summary>
-        /// Value based of if the server is running or not
+        /// Boolean value based of if the server is running or not
         /// </summary>
         public static bool IsRunning { get; private set; } = false;
 
@@ -58,7 +58,7 @@ namespace UnoNet.Server
 
 
         /// <summary>
-        /// Close the server
+        /// Closes the server
         /// </summary>
         public static void close() {
             if (IsRunning) {

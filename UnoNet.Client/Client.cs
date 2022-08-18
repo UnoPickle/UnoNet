@@ -8,13 +8,16 @@ using UnoNet.Core;
 
 namespace UnoNet.Client
 {
+    /// <summary>
+    /// Main class for UnoNet.Client
+    /// </summary>
     public static class Client{
         internal static TcpClient client;
         internal static CancellationTokenSource cts = new CancellationTokenSource();
         internal static List<int> recievedClientIDs = new List<int>();
 
         /// <summary>
-        /// ID of the machine in the server
+        /// The ID of the machine in the server
         /// </summary>
         public static int ID { get; internal set; }
         /// <summary>
@@ -108,7 +111,9 @@ namespace UnoNet.Client
         /// Gets called every time a client joins the server 
         /// </summary>
         public static EventHandler<NewClientArgs> OnClientConnecting;
-
+        /// <summary>
+        /// Gets called every time a client disconnects from the server
+        /// </summary>
         public static EventHandler<ClientDisconnectingArgs> OnClientDisconnect;
 
         internal static void InvokeOnPacketRecieved(Packet packet) {

@@ -13,7 +13,7 @@ namespace UnoNet.Client.Utils
         public int ID { get; }
 
         /// <summary>
-        /// Reason of disconnection
+        /// Reason of disconnection (W.I.P)
         /// </summary>
         public DisconnectReason reason { get; }
 

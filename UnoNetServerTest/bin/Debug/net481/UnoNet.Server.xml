@@ -55,7 +55,12 @@
             </summary>
             <param name="packet">Data to send</param>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:UnoNet.Server.Server.getAllClients" -->
+        <member name="M:UnoNet.Server.Server.getAllClients">
+            <summary>
+            Get all the connected clients
+            </summary>
+            <returns>Returns a List with all the connected clients</returns>
+        </member>
         <member name="M:UnoNet.Server.Server.KickClient(System.Int32,UnoNet.Core.DisconnectReason)">
             <summary>
             Remove a connected client

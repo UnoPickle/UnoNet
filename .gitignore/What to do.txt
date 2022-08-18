@@ -1,6 +1,0 @@
-Features:
-- Send client's ID to the client upon entering
-- Add disconnect event
-- When adding the features above, use packet with an UnoNet tag to identify them
-
-Fixes:
